@@ -3,20 +3,41 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@expo/vector-icons": "^15.0.2",
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "@react-native-voice/voice": "^3.2.4",
     "expo": "~57.0.20",
+    "expo-blur": "~57.0.2",
+    "expo-build-properties": "~57.0.17",
+    "expo-camera": "~57.0.4",
+    "expo-contacts": "~57.0.4",
+    "expo-dev-client": "~57.0.18",
+    "expo-haptics": "~57.0.2",
+    "expo-linking": "~57.0.9",
+    "expo-mlkit-ocr": "^0.2.7",
+    "expo-speech-recognition": "^57.0.0",
     "expo-status-bar": "~57.0.1",
+    "expo-widgets": "^57.0.17",
     "react": "19.2.3",
-    "react-native": "0.86.3"
+    "react-native": "0.86.3",
+    "react-native-call-log": "^3.0.0",
+    "react-native-nfc-manager": "^3.17.2",
+    "react-native-qrcode-svg": "^6.3.22",
+    "react-native-reanimated": "4.5.1",
+    "zustand": "^5.0.15"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "patch-package": "^8.0.1",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "reset-project": "node ./scripts/reset-project.js",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "postinstall": "patch-package"
   },
   "private": true
 }

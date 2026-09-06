@@ -1,25 +1,56 @@
 {
   "expo": {
-    "name": "yep",
-    "slug": "yep",
+    "name": "Yep",
+    "slug": "yep-app",
     "version": "1.0.0",
+    "jsEngine": "hermes",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "ios": {
-      "supportsTablet": true
-    },
+    "userInterfaceStyle": "dark",
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "buildToolsVersion": "36.0.0",
+            "minSdkVersion": 24
+          }
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Yep to scan contact QRs and numbers."
+        }
+      ],
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "Allow Yep to save and share contacts."
+        }
+      ]
+    ],
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false
+      "package": "com.yep.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.READ_CALL_LOG",
+        "android.permission.READ_CONTACTS",
+        "android.permission.WRITE_CONTACTS",
+        "android.permission.NFC",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.CHANGE_WIFI_MULTICAST_STATE",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN"
+      ]
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
+    "extra": {
+      "eas": {
+        "projectId": "eea2467e-b6a9-4fe8-afaf-1588c75eada1"
+      }
     }
   }
 }
