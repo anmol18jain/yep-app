@@ -13,6 +13,17 @@
         "buildType": "apk"
       }
     },
+    "direct-apk": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "playstore": {
+      "android": {
+        "buildType": "app-bundle"
+      }
+    },
     "production": {
       "android": {
         "buildType": "apk"
